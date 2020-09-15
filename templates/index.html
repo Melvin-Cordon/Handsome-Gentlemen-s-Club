@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+    <table class = "table table-bordered" style="width:100%">
+        <th> Ticker </th>
+        <th> Shares </th>
+        <th> Cost </th>
+        <th> Value </th>
+        {% for row in rows %}
+        <tr>
+            <td> {{ row["ticker"] }} </td>
+            <td> {{ row["shares"] }} </td>
+            <td> {{ row["cost"] }} </td>
+            <td> {{ row["value"] }} </td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
